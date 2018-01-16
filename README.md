@@ -1,2 +1,5 @@
 # configuration
-Some customized configurations in Linux
+在这里记录一些在Linux中习惯使用的常用配置，包括：
++ 命令行中的常见命令重命名 
++ 对vim的配置以及插件安装
++ 用来管理终端的tmux，不仅用来分屏，还可以在关闭终端时保持任务后台运行
