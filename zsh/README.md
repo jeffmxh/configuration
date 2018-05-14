@@ -19,3 +19,5 @@
   + 安装：``git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting``
   + 编辑：``vim ~/.zshrc``，找到这一行，后括号里面的后面添加：plugins=( 前面的一些插件名称 zsh-syntax-highlighting)
   + 刷新下配置：``source ~/.zshrc``
+
+[配置参考链接](https://blog.csdn.net/u010138906/article/details/78778627)
