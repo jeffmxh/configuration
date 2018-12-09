@@ -94,9 +94,8 @@ alias la='ls -A --color=tty'
 alias l='ls -CF --color=tty'
 alias lh='ls -hl --color=tty'
 alias count='ls -l | grep "^-" | wc -l'
-alias matlab='sudo /home/da/MATLAB/R2017a/bin/matlab'
-alias mrun='sudo /home/da/MATLAB/R2017a/bin/matlab -nodesktop -nosplash'
 alias gl='git log --oneline --all --graph --decorate $*'
+alias gs='git status'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -122,11 +121,19 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# added by Miniconda3 4.3.21 installer
-export PATH="/home/da/miniconda3/bin:$PATH"
-
-# added by Anaconda3 4.2.0 installer
-export PATH="/home/da/anaconda3/bin:$PATH"
-
-# added by Anaconda3 installer
-export PATH="/home/da/anaconda3/bin:$PATH"
+# added by Anaconda3 5.3.0 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/jeffmxh/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/home/jeffmxh/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/jeffmxh/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/home/jeffmxh/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
